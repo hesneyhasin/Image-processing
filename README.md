@@ -32,9 +32,9 @@ This project implements **YOLOv8 instance segmentation for automated car damage 
    ```
 3. **data.yaml format**:
    ```yaml
-   path: [path to data] (https://universe.roboflow.com/college-gxdrt/car-damage-detection-ha5mm/dataset/1)
-   train: https://universe.roboflow.com/college-gxdrt/car-damage-detection-ha5mm/dataset/1/images?split=train
-   val: https://universe.roboflow.com/college-gxdrt/car-damage-detection-ha5mm/dataset/1/images?split=valid
+   path: [path to data] 
+   train: [path to train image]
+   val: [path to test image]
    nc: 1  # number of classes
    names: ['car-damage']
    ```
