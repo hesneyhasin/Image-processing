@@ -10,8 +10,8 @@ This project implements **YOLOv8 instance segmentation for automated car damage 
 
 ### 1. Prerequisites
 - Python 3.8+
-- NVIDIA GPU (recommended, CUDA 11.8+)
-- Google Colab (for notebook execution) or local GPU machine
+- GPU 
+- Kaggle (for notebook execution) or local GPU machine
 
 
 
@@ -119,9 +119,9 @@ loss = supervised(mixed_x, mixed_y) + consistency_loss
 
 ### Run Baseline Model
 ```bash
-# Open assignment1_baseline/baseline.ipynb in Google Colab or Jupyter
+# Open assignment1_baseline/baseline.ipynb in Google Colab or Jupyter or Kaggle
 
-# Mount Google Drive (in notebook)
+# Mount Google Drive (in notebook only for kaggle and jupiter)
 from google.colab import drive
 drive.mount('/content/drive')
 
@@ -170,28 +170,18 @@ print(f"mAP50-95: {metrics['mAP50-95']:.3f}")
 
 ## Environment Setup
 
-### Local Machine (GPU)
-```bash
-# Create virtual environment
-python -m venv ssl_env
-source ssl_env/bin/activate  # or ssl_env\Scripts\activate on Windows
+### Kaggle Notebook (Recommended)
 
-# Install dependencies
-pip install -r requirements.txt
+This project was developed using **Kaggle Notebook with T4 x2 GPU**.
 
-# For GPU support
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-```
+#### GPU Configuration
+1. Go to notebook Settings (right panel)
+2. Select **Accelerator → GPU T4 x2**
+3. Enable **Internet** if you need to install packages
 
-### Google Colab (Recommended)
-```python
-# Run in first notebook cell
-!pip install -r /path/to/requirements.txt
 
-# Mount Drive for data/results
-from google.colab import drive
-drive.mount('/content/drive')
-```
+
+
 
 ## Key Parameters & Hyperparameters
 
